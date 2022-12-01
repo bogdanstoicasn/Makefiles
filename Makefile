@@ -2,25 +2,25 @@
 # compilator
 CC = gcc
 OUT=test
-# flaguri pentru warninguri
+# flags for warnings
 CFLAGS = -Wall -Wextra -std=c99
 
-# fisiere obiect create la build
+# object files created at build
 OBJ = function.o main.o
 
-#build program -- echivalent gcc function.o main.o -o 
+#build program -- same as: gcc function.o main.o -o 
 build: function main
 	$(CC) $(OBJ) -o ./$(OUT)
 
-# compilare functii -- echivalent gcc --Wall -Wextra -c function.h function.c 
+# function compilation -- same as: gcc --Wall -Wextra -c function.h function.c 
 function: function.h function.c
 	$(CC) $(CFLAGS) -c $@.c
 
-# compilare functia main -- echivalent gcc --Wall -Wextra -c main.c 
+# main function compilation -- same as: gcc --Wall -Wextra -c main.c 
 main: main.c
 	$(CC) $(CFLAGS) -c $@.c
 
-#pentru rulare
+#run
 run: build
 	./$(OUT)
 
