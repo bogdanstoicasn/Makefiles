@@ -1,4 +1,4 @@
-####Copyright 2022 Stoica Bogdan (bogdanstoicasn@yahoo.com)
+####Copyright 2022-2023 Stoica Bogdan (bogdanstoicasn@yahoo.com)
 # compilator
 CC = gcc
 OUT=test
